@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- 모바일은 화면크기를 자동으로 줄여서 표현하는 방식. 1:1사이즈의 대응을 위하여 viewport코드를 추가한다 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PJK_PortFolio</title>
     <!-- 제이쿼리 설치 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
@@ -65,18 +65,16 @@
                     $('#skills>ul>li:nth-child(3)>.skills_bg>.skills_box').delay(200).animate({'width':'80%'},200)
                     $('#skills>ul>li:nth-child(4)>.skills_bg>.skills_box').delay(300).animate({'width':'80%'},200)
                 }
-                
             }
         })
-    
 
         $('#close_btn').click(function(){
             $('#menu_popup').fadeOut()
+            
         })
         $('#mobile_menu').click(function(){
             $('#menu_popup').fadeIn()
         })
-
         $('#main>h1').animate({'top':'-50px','opacity':'1'},300)
         $('#main>p').delay(100).animate({'top':'70px','opacity':'1'},300)
         setInterval(function(){
@@ -84,19 +82,18 @@
             $('#wheel').animate({'top':'6px','opacity':'1'},290)
         },600)
 		$('#menu_popup_menu>li').mouseenter(function(){
-            $(this).children('.sub').slideDown()
+            $(this).children('.sub').stop().slideDown()
         })
         $('#menu_popup_menu>li').mouseleave(function(){
-            $(this).children('.sub').slideUp()
+            $(this).children('.sub').stop().slideUp()
         })
-
 	});
 </script>
 <style>
     * { margin: 0; padding: 0; list-style: none; }
     a { text-decoration: none; color: inherit;}
     body,html{height: 100%;}
-    #main{width: 100%;height: 100%;background: url(cat.jpg) center no-repeat; background-size: cover; color: #fff; position: relative;}
+    #main{width: 100%;height: 100%;background: url(earth.jpg) center no-repeat; background-size: cover; color: #fff; position: relative;}
     #main>h1{width: 100%;line-height: 50px;height: 50px;text-align: center;position: absolute; top: 150px;bottom: 0;margin: auto; font-size: 20px;}
     #main>p{width: 100%;text-align: center; font-size: 14px;line-height: 25px; height: 50px;position: absolute; top: 50px;bottom: 0;margin: auto;}
     #mouse{width: 20px;height: 35px; border: 2px solid #fff; border-radius: 330px;position: absolute;left: 0;right: 0;bottom: 30px; margin: auto;}
@@ -105,7 +102,7 @@
     #logo{float: left;margin-left: 20px;}
     #menu{float: right;margin-right: 20px;}
     #menu>li{float: left;margin-left: 20px; font-size: 14px;}
-    #mobile_menu{width: 20px;height: 20px;float: right;background-color: green; margin-top: 15px; margin-right: 20px;cursor: pointer;}
+    #mobile_menu{width: 20px;height: 20px;float: right; margin-top: 15px; margin-right: 20px;cursor: pointer;}
     #mobile_menu>li{width: 20px;height: 2px;background-color: #fff;}
     #mobile_menu>li:nth-child(2){margin: 7px 0;}
     #menu_popup{width: 100%;height: 100%;position: fixed; background-color: rgba(255,255,255,0.95); left: 0;top: 0; display: none;}
@@ -128,7 +125,7 @@
     #main_work1_right>button:hover{background-color: #000;color: #fff;}
     #main_work2{width: 1200px;margin: auto;margin-top: 100px; overflow: hidden;}
     #main_work2_left{width: 75%;height: 700px;float: left;}
-    #main_work2_right{width: 23%;height: 700px;float: right; background-color: green;overflow: hidden;border-radius: 20px;box-shadow: 5px 10px 20px rgba(0,0,0,0.2);}
+    #main_work2_right{width: 23%;height: 700px;float: right;overflow: hidden;border-radius: 20px;box-shadow: 5px 10px 20px rgba(0,0,0,0.2);}
     #main_work2_right>img{width: 100%;}
     #main_work2_fonts>h2{font-size: 30px;line-height: 50px;}
     #main_work2_fonts>ul{overflow: hidden;}
@@ -147,14 +144,12 @@
     #main_work2_colors>ul>li:nth-child(4)>.color_box{background-color: #ddd;}
     #main_work2_colors>ul>li>h4{margin-top: 5px; font-size: 16px; font-weight: 400; color: #999; text-decoration: underline;}
     #main_work2_colors>p{margin-top: 20px;}
-
     #main_work2_icons{margin-top: 50px;}
     #main_work2_icons>h2{font-size: 30px;line-height: 50px;}
     #main_work2_icons>ul{overflow: hidden;}
     #main_work2_icons>ul>li{width: 20px;height: 20px; float: left; margin-right: 20px; margin-top: 20px;}
     #main_work2_icons>ul>li>img{width: 100%; height: 100%;}
     #main_work2_icons>p{margin-top: 20px;}
-
     #pc_work{width: 100%;background-color: #ddd; padding: 100px 0; text-align: center;}
     #pc_work>h3{font-size: 22px; margin-top: 30px; opacity: 0;}
     #pc_work>p{width: 85%;margin: auto; margin-top: 50px; opacity: 0;}
@@ -196,7 +191,7 @@
     #skills>ul>li>.skills_bg{width: 100%;height: 10px;background-color: #ccc;margin-top: 30px;}
     #skills>ul>li>.skills_bg>.skills_box{width: 0%;height: 10px;background:linear-gradient(to right, #63f,#c09);}
     #about_me2{width: 1000px;margin: auto;margin-top: 30px;border-top: 1px solid #000;text-align: left;padding: 1.5%;box-sizing: border-box;}
-    #contact_me{width: 100%;padding: 200px 0; background: url(cat.jpg) center no-repeat fixed; background-size: cover;color: #fff;text-align: center;}
+    #contact_me{width: 100%;padding: 200px 0; background: url(earth.jpg) center no-repeat fixed; background-size: cover;color: #fff;text-align: center;}
     #contact_me>h4{line-height: 40px;}
     #contact_me>ul{width: 1000px;margin: auto; overflow: hidden;}
     #contact_me>ul>li:nth-child(1){width: 25%;padding: 30px 0;border-right: 1px solid #999; box-sizing: border-box; float: left;}
@@ -306,7 +301,7 @@
 <body>
     <div id="main">
         <h1>Hello!</h1>
-        <p>Web publisher ParkJunKyu<br>ul/ ux designer</p>
+        <p>Web publisher ParkJunkyu<br>ul/ux designer</p>
         <div id="mouse">
             <div id="wheel"></div>
         </div>
@@ -314,12 +309,12 @@
     <header>
         <h1 id="logo">PJK</h1>
         <ul id="menu">
-            <li>HomePc.verAboutContact</li>
-            <li>Main</li>
-            <li>Responsive</li>
-            <li>Pc.ver</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li><a href="#main">Home</a></li>
+            <li><a href="#main_work">Main</a></li>
+            <li><a href="#pc_mobile">Responsive</a></li>
+            <li><a href="#pc_work">PC.ver</a></li>
+            <li><a href="#about_me">About</a></li>
+            <li><a href="#contact_me">Contact</a></li>
         </ul>
         <ul id="mobile_menu">
             <li></li>
@@ -330,26 +325,35 @@
     <div id="menu_popup">
         <img src="icons/close_btn.png" alt="" id="close_btn">
         <ul id="menu_popup_menu">
-            <li>Home</li>
-            <li>Main</li>
-            <li>Responsive
+            <li><a href="#main">Home</a></li>
+            <li><a href="#main_work">Main</a></li>
+            <li><a href="#pc_mobile">Responsive</a>
                 <ul class="sub">
-                    <li>bts</li>
-                    <li>samsungpay</li>
+                    <li>BTS</li>
                 </ul>
             </li>
-            <li>Pc.ver
+            <li><a href="#pc_work">Pc.ver</a>
                 <ul class="sub">
-                    <li>lush</li>
-                    <li>konacard</li>
-                    <li>ford</li>
-                    <li>coffeebean</li>
-                    <li>radisson</li>
-                    <li>laniege</li>
+                    <li></li>
+                    <li>
+                        <a href="https://pjk0305.github.io/laneige/">Laneige</a>
+                    </li>
+                    <li>
+                        <a href="https://pjk0305.github.io/lotteworld/">Lotteworld</a>
+                    </li>
+                    <li>
+                        <a href="https://pjk0305.github.io/Ottogi/">Ottogi</a>
+                    </li>
+                    <li>
+                        <a href="https://pjk0305.github.io/Subway/">Subway</a>
+                    </li>
+                    <li>
+                        <a href="https://pjk0305.github.io/Glowoasis/">Glowoasis</a>
+                    </li>
                 </ul>
             </li>
-            <li>About</li>
-            <li>Contact</li>
+            <li><a href="#about_me">About</a></li>
+            <li><a href="#contact_me">Contact</a></li>
         </ul>
     </div>
     <section id="main_work">
@@ -362,7 +366,7 @@
             <img src="images/ipad.png" alt="" id="main_work1_left_img">
             <div id="main_work1_right">
                 <img src="images/main_logo_b.png" alt="">
-                <p>평소 여행과 동물에 관심이 많아 이 둘이 결합된 [National Geographic]을 주제로 선정하여 디자인 기획부터 css, Jquery, Javascript, Plug in 작업을 통해 기존에 없던 새로운 싸이트를 구현했습니다. 마우스 스크롤, 드래그, 클릭 동작에 중점을 두었고 서브페이지 작업으로 페이지간 이동이 가능하며 반응형으로 제작되어 어느 기기에서나 편안한 이용 및 감상이 가능합니다.</p>
+                <p>평소 여행과 동물에 관심이 많아 이 둘이 결합된 [National Geographic]을 주제로 선정하여 디자인 기획부터 css, Jquery, Javascript, Plug in 작업을 통해 기존에 없던 새로운 사이트를 구현했습니다. 마우스 스크롤, 드래그, 클릭 동작에 중점을 두었고 서브페이지 작업으로 페이지간 이동이 가능하며 반응형으로 제작되어 어느 기기에서나 편안한 이용 및 감상이 가능합니다.</p>
                 <button>Let's see!</button>
             </div>
         </div>
@@ -387,7 +391,7 @@
                             <h4>Roboto Slab</h4>
                         </li>
                     </ul>
-                    <p>전체적으로 깔끔한 느낌의 폰트 사용, Roboto slab 폰트로 포인트를 주었습니다.</p>
+                    <p>전체적으로 깔끔한 느낌의 폰트를 사용하고 Roboto slab 폰트로 포인트를 주었습니다.</p>
                 </div>
                 <div id="main_work2_colors">
                     <h2>colors</h2>
@@ -446,7 +450,7 @@
                 <img src="images/bts.jpg" alt="" class="pc">
                 <img src="images/bts_ipad2.png" alt="" class="tablet">
                 <img src="images/bts_iphone2.png" alt="" class="mobile">
-                <button>BTS</button>
+                <button type="button" onclick="window.open('https://pjk0305.github.io/bts/');">BTS</button>
             </li>
             <li>
                 <img src="images/samsungpay.jpg" alt="" class="pc">
@@ -457,25 +461,24 @@
         </ul>
     </section>
     <section id="pc_work">
-        <h3>Pc version works</h3>
+        <h3>PC version works</h3>
         <p>First work is my representative portfolio.<br>And besides this work, I’m looking forward for new projects and opportunities.</p>
             <ul>
-                <li><img src="images/lush.jpg" alt=""><button>LUSH</button></li>
-                <li><img src="images/konacard.jpg" alt=""><button>KONACARD</button></li>
-                <li><img src="images/ford.jpg" alt=""><button>FORD</button></li>
-                <li><img src="images/coffeebean.jpg" alt=""><button>COFFEEBEAN</button></li>
-                <li><img src="images/radisson.jpg" alt=""><button>RADISSON</button></li>
                 <li><img src="images/laneige.jpg" alt=""><button type="button" onclick="window.open('https://pjk0305.github.io/laneige/');">LANEIGE</button></li>
+                <li><img src="images/lotteworld.jpg" alt=""><button type="button" onclick="window.open('https://pjk0305.github.io/lotteworld/');">Lotteworld</button></li>
+                <li><img src="images/Ottogi.jpg" alt=""><button type="button" onclick="window.open('https://pjk0305.github.io/Ottogi/');">Ottogi</button></li>
+                <li><img src="images/subway.jpg" alt=""><button type="button" onclick="window.open('https://pjk0305.github.io/subway/');">Subway</button></li>
+                <li><img src="images/Glowoasis.jpg" alt=""><button type="button" onclick="window.open('https://pjk0305.github.io/Glowoasis/');">Glowoasis</button></li>
             </ul>
     </section>
     <section id="about_me">
         <h3>About Me</h3>
         <img src="" alt="" id="about_me_img">
         <h4>web, ux/ui designer</h4>
-        <h2>JUNKYU PARK</h2>
+        <h2>Junkyu Park</h2>
         <article id="about_me1">
             <div id="liscence">
-                <h4>liscence</h4>
+                <h4>licence</h4>
                 <ul>
                     <li>
                         <h5>웹디자인기능사</h5>
@@ -535,7 +538,7 @@
         </article>
         <article id="about_me2">
             <h4>introduction</h4>
-            <p>테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.테스트용 텍스트입니다.</p>
+            <p>안녕하세요, 하루하루 성장하는 웹퍼블리셔를 꿈꾸는 박준규입니다.</p>
         </article>
     </section>
 
